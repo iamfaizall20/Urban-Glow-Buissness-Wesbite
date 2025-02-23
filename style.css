@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Poppins:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.strip{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: 14px;
+    background: #D9EAFD;
+    font-weight: 450;
+    opacity: 0.9;
+    cursor:pointer;
+}
+.info-prt{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.strip-portion{
+    display: flex;
+    border-right: 1px solid #d0d0dd;
+    padding: 0 20px;
+}
+.strip-portion span{
+    padding-right: 10px;
+    font-size: 16px;
+    color: brown;
+}
+.menu-checkbox{
+    display: none;
+}
+#menu-icon:checked ~ .sidebar{
+    display: flex;
+}
+
+.navbar{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem ;
+    cursor: pointer;
+}
+.navbar ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.navbar a{
+    color: black;
+    opacity: 0.8;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+.navbar a:hover{
+    opacity: 1;
+    font-size: 15px;
+    border-bottom: 1.5px solid #0f488a;
+}
+.navbar label{
+    display: none;
+}
+.navbar i{
+    font-size: 24px;
+}
+.sidebar{
+    height: 200px;
+    display: none;
+}
+.sidebar ul{
+    flex-direction: column;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: 20px;
+    gap: 20px;
+    text-align: right;
+}
+.sidebar ul a{
+    display: block;
+    font-size: 18px;
+}
+.hero-page{
+    height: calc(100vh - 100px);
+    margin: 5px 20px;
+    background: linear-gradient(rgba(0,0, 0, 0.85),rgb(0, 0, 0 , 0.85)), 
+    url('https://img.freepik.com/premium-photo/professional-stylist-cuts-female-hair-salon_170532-1759.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    padding: 3rem 8rem;
+}
+.hero-page h1{
+    font-size: 5.2rem;
+}
+.hero-page p{
+    margin: 2.8rem 0;
+    font-size: 1.25rem;
+    padding: 0 8rem;
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+.hero-button{
+    border: none;
+    outline: none;
+    background-color: #D9EAFD;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+.hero-button:hover{
+    background-color: #acd0fa;
+    scale: 0.95;
+}
+.why-choose-section,
+.service-section,
+.newsletter-section{
+    margin: 30px 0 ;
+    text-align: center;
+    background: #D9EAFD;
+    padding: 30px 10px;
+}
+.why-cards{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    place-content: center;
+}
+.card{
+    height: 150px;
+    width: 480px;
+    display: flex;
+    box-shadow: 0px 2px 5px rgba(0,0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.why-cards:hover .card{
+    opacity: 0.6;
+}
+.why-cards .card:hover{
+    opacity: 1;
+    scale: 1.01;
+}
+.card-left{
+    width: 25%;
+    place-content: center;
+    font-size: 4rem;
+    color: brown;
+}
+.card-right{
+    width: 75%;
+    text-align: start;
+    padding-right: 15px;
+}
+.card-heading{
+    font-weight: 550;
+    font-size: 20px;
+    margin: 20px 0 15px;
+}
+.card-para{
+    opacity: 0.7;
+    font-size: 15.5px;
+}
+.service-section{
+    background: none;
+}
+.service-cards{
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    gap: 40px;
+}
+.service-cards:hover .service-card{
+    opacity: 0.7;
+}
+.service-card{
+    margin-top: 15px;
+    height: 330px;
+    width: 270px;
+    box-shadow: -1px 2px 5px rgba(0,0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+.service-cards .service-card:hover{
+    opacity: 1;
+    scale: 1.03;
+}
+.image-prt{
+    height: 60%;
+    background: #000;
+}
+.image-prt img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.content-prt{
+    height: 40%;
+    text-align: start;
+    padding: 10px 15px;
+}
+.newsletter-section p{
+    margin: 30px 10px;
+}
+.newsletter-section input{
+    width: 350px;
+    height: 38px;
+    border: 1px solid #0f488a;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    padding: 15px;
+    background: none;
+}
+.subscribe-button{
+    padding: 7px 16px;
+    background: #0f488a;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+}
+footer{
+    position: relative;
+    height: 280px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #082241;
+    color: white;
+    padding: 40px;
+}
+.footer-col h1{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.footer-col ul a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.footer-col a:hover{
+    opacity: 1;
+    font-size: 15px;
+}
+.footer-col ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.copyright-strip{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+    border-top: 0.1px solid #d0d0dd36;
+}
+@media (min-width:1440px) {
+    .hero-page{
+        padding: 8rem 6rem;
+    }
+    .hero-page h1{
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:1120px) {
+        .hero-page{
+            padding: 5rem;
+        }
+        .hero-page h1{
+            font-size: 5rem;
+        }
+        .hero-page p{
+            padding: 0 4rem;
+        }
+        .service-card{
+            width: 320px;
+        }
+}
+@media  (max-width:910px) {
+        .strip{
+            padding: 0 1.5rem;
+        }
+        .hero-page{
+            padding: 6rem 1rem;
+        }
+        .hero-page h1{
+            font-size: 4.5rem;
+        }
+        .why-cards{
+            gap: 30px;
+        }
+        .card{
+            width: 410px;
+            height: 190px;
+        }
+        .service-card{
+            height: 360px;
+            width: 350px;
+        }
+}
+@media (max-width:740px) {
+    .strip{
+        display: block;
+        height: auto;
+        padding: 0.5rem 2rem;
+    }
+    .strip-portion{
+        margin-top: 10px;
+        padding: 0;
+    }
+    .hero-page{
+        padding: 8rem 2rem;
+    }
+    .hero-page h1{
+        font-size: 3.5rem;
+    }
+    .hero-page p{
+        padding: 0 3rem;
+        font-size: 1rem;
+    }
+    .card{
+        width: 600px;
+        height: 150px;
+    }
+    .service-card{
+        height: 360px;
+        width: 300px;
+    }
+}
+@media (max-width:550px) {
+    .hero-page{
+        padding: 4rem 1rem;
+    }
+    .card{
+        height: 160px;
+        width: 460px;
+    }
+    .service-cards{
+        gap: 25px;
+    }
+    .service-card{
+        width: 400px;
+    }
+    footer{
+        padding: 40px 20px;
+    }
+}
+@media (max-width:430px){
+    .strip{
+        display: none;
+    }
+    .navbar{
+        padding: 0 15px;
+    }
+    .navbar a{
+        display: none;
+    }
+    .navbar label{
+        display: flex   ;
+    }
+    .hero-page{
+        margin: 5px 10px;
+        padding: 5rem 1rem;
+    }
+    .why-choose-section h1{
+        font-size: 28px;
+    }
+    .hero-page h1{
+        font-size: 3rem;
+    }
+    .hero-page p{
+        padding: 0;
+        line-height: 25px;
+    }
+    .hero-button{
+        font-size: 13px;
+    }
+    .why-cards{
+        gap: 25px;
+    }
+    .card{
+        height: 160px;
+        width: 340px;
+    }
+    .card i{
+        font-size: 50px;
+    }
+    .card-heading{
+        font-size: 19px;
+        margin: 10px 0; 
+    }
+    .card-para{
+        font-size: 14px;
+    }
+    .service-card{
+        height: 320px;
+        width: 350px;
+    }
+    .subscribe-button{
+        margin-top: 10px;
+        width: 350px;
+    }
+    footer{
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 20px 60px;
+    }
+    .footer-col h1{
+        margin: 20px 0 15px;
+    }
+}
